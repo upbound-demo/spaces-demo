@@ -1,0 +1,8 @@
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: provider-gcp-servicenetworking
+  annotations:
+    argocd.argoproj.io/sync-wave: "-2"
+spec:
+  package: xpkg.upbound.io/upbound/provider-gcp-servicenetworking:v1.0.0

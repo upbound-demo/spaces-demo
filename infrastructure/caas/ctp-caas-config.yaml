@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ctp-caas-config
+  namespace: argocd
+  labels:
+    acmeco/team: caas
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/upbound-demo/spaces-demo.git
+    targetRevision: HEAD
+    path: configuration/caas
+    directory:
+      recurse: true
+  destination:
+    name: ctp-caas
+    namespace: default
