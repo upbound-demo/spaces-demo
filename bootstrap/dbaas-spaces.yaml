@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dbaas-spaces-control-planes
+  namespace: argocd
+  labels:
+    acmeco/team: dbaas
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/upbound-demo/spaces-demo.git
+    targetRevision: HEAD
+    path: infrastructure/dbaas
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
