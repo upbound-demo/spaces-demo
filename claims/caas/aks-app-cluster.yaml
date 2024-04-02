@@ -1,13 +1,13 @@
 apiVersion: azure.caas.upbound.io/v1alpha1
 kind: Cluster
 metadata:
-  name: app-cluster-02
+  name: aks-app-cluster-02
   namespace: default
   annotations:
     uptest.upbound.io/pre-delete-hook: ../testhooks/azure-release-delete.sh
 spec:
   parameters:
-    id: app-cluster-02
+    id: aks-app-cluster-02
     region: West US
     version: 1.28.5
     nodes:
@@ -18,4 +18,4 @@ spec:
     deletionPolicy: Delete
     providerConfigName: default
   writeConnectionSecretToRef:
-    name: app-cluster-02-kubeconfig
+    name: aks-app-cluster-02-kubeconfig
