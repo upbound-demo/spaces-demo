@@ -6,7 +6,7 @@ metadata:
   labels:
     acmeco/team: caas
 spec:
-  project: green-lab
+  project: default
   source:
     repoURL: https://github.com/upbound-demo/spaces-demo.git
     targetRevision: HEAD
