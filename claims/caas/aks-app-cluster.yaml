@@ -9,7 +9,7 @@ spec:
   parameters:
     id: aks-app-cluster-02
     region: East US
-    version: "1.29.0"
+    version: "1.29.2"
     nodes:
       count: 3
       instanceType: Standard_B2s
