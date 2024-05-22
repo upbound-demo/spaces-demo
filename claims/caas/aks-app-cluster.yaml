@@ -8,7 +8,7 @@ metadata:
 spec:
   parameters:
     id: aks-app-cluster-02
-    region: West US
+    region: East US
     version: "1.29.0"
     nodes:
       count: 3
