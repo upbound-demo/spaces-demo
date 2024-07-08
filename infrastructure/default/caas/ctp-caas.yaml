@@ -1,14 +1,14 @@
 apiVersion: spaces.upbound.io/v1beta1
 kind: ControlPlane
 metadata:
-  name: ctp-dbaas
+  name: ctp-caas
   namespace: default
   labels:
-    acmeco/team: dbaas
+    acmeco/team: default-caas
 spec:
   crossplane:
     autoUpgrade:
       channel: Stable 
   writeConnectionSecretToRef:
-    name: kubeconfig-ctp-dbaas
+    name: kubeconfig-ctp-caas
     namespace: default

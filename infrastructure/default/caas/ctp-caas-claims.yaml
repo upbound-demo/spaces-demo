@@ -4,13 +4,13 @@ metadata:
   name: ctp-caas-claims
   namespace: argocd
   labels:
-    acmeco/team: caas
+    acmeco/team: default-caas
 spec:
   project: default
   source:
     repoURL: https://github.com/upbound-demo/spaces-demo.git
-    targetRevision: HEAD
-    path: claims/caas
+    targetRevision: large-demo
+    path: claims/default/caas
     directory:
       recurse: true
   destination:

@@ -4,13 +4,13 @@ metadata:
   name: dbaas-spaces-control-planes
   namespace: argocd
   labels:
-    acmeco/team: dbaas
+    acmeco/team: default-dbaas
 spec:
   project: default
   source:
     repoURL: https://github.com/upbound-demo/spaces-demo.git
-    targetRevision: HEAD
-    path: infrastructure/dbaas
+    targetRevision: large-demo
+    path: infrastructure/default/dbaas
   destination:
     server: https://kubernetes.default.svc
     namespace: default

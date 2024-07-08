@@ -1,0 +1,24 @@
+apiVersion: aws.caas.upbound.io/v1alpha1
+kind: Cluster
+metadata:
+  name: aws-app-cluster-01
+  namespace: consumer-services
+  annotations:
+    uptest.upbound.io/pre-delete-hook: ../testhooks/aws-release-delete.sh
+spec:
+  parameters:
+    id: aws-app-cluster-01
+    region: us-east-2
+    version: '1.27'
+    iam:
+      roleArn: >-
+        arn:aws:iam::609897127049:role/AWSReservedSSO_AdministratorAccess_d703c73ed340fde7
+    nodes:
+      count: 3
+      instanceType: t3.small
+    gitops:
+      url: https://github.com/upbound/caas-cluster-configuration
+    deletionPolicy: Delete
+    providerConfigName: consumer-services
+  writeConnectionSecretToRef:
+    name: aws-app-cluster-01-kubeconfig

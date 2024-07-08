@@ -1,18 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ctp-caas-config
+  name: ctp-dbaas-config
   namespace: argocd
   labels:
-    acmeco/team: caas
+    acmeco/team: default-dbaas
 spec:
   project: default
   source:
     repoURL: https://github.com/upbound-demo/spaces-demo.git
-    targetRevision: HEAD
-    path: configuration/caas
+    targetRevision: large-demo
+    path: configuration/default/dbaas
     directory:
       recurse: true
   destination:
-    name: ctp-caas
+    name: ctp-dbaas
     namespace: default

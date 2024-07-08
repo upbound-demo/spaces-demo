@@ -4,13 +4,13 @@ metadata:
   name: caas-spaces-control-planes
   namespace: argocd
   labels:
-    acmeco/team: caas
+    acmeco/team: default-caas
 spec:
   project: default
   source:
     repoURL: https://github.com/upbound-demo/spaces-demo.git
-    targetRevision: HEAD
-    path: infrastructure/caas
+    targetRevision: large-demo
+    path: infrastructure/default/caas
   destination:
     server: https://kubernetes.default.svc
     namespace: default
