@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ctp-consumer-services-caas-config
+  namespace: argocd
+  labels:
+    acmeco/team: consumer-services-caas
+spec:
+  project: consumer-services
+  source:
+    repoURL: https://github.com/upbound-demo/spaces-demo.git
+    targetRevision: large-demo
+    path: configuration/consumer-services/caas
+    directory:
+      recurse: true
+  destination:
+    name: ctp-consumer-services-caas
+    namespace: consumer-services
