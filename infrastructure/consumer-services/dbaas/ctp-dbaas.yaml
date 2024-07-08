@@ -1,0 +1,14 @@
+apiVersion: spaces.upbound.io/v1beta1
+kind: ControlPlane
+metadata:
+  name: ctp-consumer-services-dbaas
+  namespace: consumer-services
+  labels:
+    acmeco/team: consumer-services-dbaas
+spec:
+  crossplane:
+    autoUpgrade:
+      channel: Stable 
+  writeConnectionSecretToRef:
+    name: kubeconfig-consumer-services-ctp-dbaas
+    namespace: consumer-services

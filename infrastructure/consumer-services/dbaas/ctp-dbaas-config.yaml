@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ctp-consumer-services-dbaas-config
+  namespace: argocd
+  labels:
+    acmeco/team: consumer-services-dbaas
+spec:
+  project: consumer-services
+  source:
+    repoURL: https://github.com/upbound-demo/spaces-demo.git
+    targetRevision: large-demo
+    path: configuration/consumer-services/dbaas
+    directory:
+      recurse: true
+  destination:
+    name: ctp-consumer-services-dbaas
+    namespace: consumer-services
