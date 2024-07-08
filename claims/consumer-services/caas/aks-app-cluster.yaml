@@ -2,7 +2,7 @@ apiVersion: azure.caas.upbound.io/v1alpha1
 kind: Cluster
 metadata:
   name: consumer-services-aks-cluster-01
-  namespace: consumer-services
+  namespace: default
   annotations:
     uptest.upbound.io/pre-delete-hook: ../testhooks/azure-release-delete.sh
 spec:
@@ -16,6 +16,6 @@ spec:
     gitops:
       url: https://github.com/upbound/caas-cluster-configuration
     deletionPolicy: Delete
-    providerConfigName: consumer-services
+    providerConfigName: default
   writeConnectionSecretToRef:
     name: consumer-services-aks-cluster-01-kubeconfig
