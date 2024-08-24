@@ -2,7 +2,7 @@ apiVersion: gcp.caas.upbound.io/v1alpha1
 kind: Cluster
 metadata:
   name: gcp-app-cluster-02
-  namespace: consumer-services
+  namespace: marketing-services
   annotations:
     uptest.upbound.io/pre-delete-hook: ../testhooks/gcp-release-delete.sh
 spec:
@@ -16,6 +16,6 @@ spec:
     gitops:
       url: https://github.com/upbound/caas-cluster-configuration
     deletionPolicy: Delete
-    providerConfigName: consumer-services
+    providerConfigName: marketing-services
   writeConnectionSecretToRef:
     name: gcp-app-cluster-02-kubeconfig

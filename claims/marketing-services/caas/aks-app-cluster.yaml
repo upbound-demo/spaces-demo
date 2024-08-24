@@ -1,13 +1,13 @@
 apiVersion: azure.caas.upbound.io/v1alpha1
 kind: Cluster
 metadata:
-  name: consumer-services-aks-cluster-01
-  namespace: consumer-services
+  name: marketing-services-aks-cluster-01
+  namespace: marketing-services
   annotations:
     uptest.upbound.io/pre-delete-hook: ../testhooks/azure-release-delete.sh
 spec:
   parameters:
-    id: consumer-services-aks-cluster-01
+    id: marketing-services-aks-cluster-01
     region: East US
     version: "1.28.5"
     nodes:
@@ -16,6 +16,6 @@ spec:
     gitops:
       url: https://github.com/upbound/caas-cluster-configuration
     deletionPolicy: Delete
-    providerConfigName: consumer-services
+    providerConfigName: marketing-services
   writeConnectionSecretToRef:
-    name: consumer-services-aks-cluster-01-kubeconfig
+    name: marketing-services-aks-cluster-01-kubeconfig

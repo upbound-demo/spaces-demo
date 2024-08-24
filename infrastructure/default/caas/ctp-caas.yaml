@@ -4,7 +4,7 @@ metadata:
   name: ctp-caas
   namespace: default
   labels:
-    acmeco/team: default-caas
+    platform/team: default-caas
 spec:
   crossplane:
     autoUpgrade:

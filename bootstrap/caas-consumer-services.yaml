@@ -4,7 +4,7 @@ metadata:
   name: caas-consumer-services-control-planes
   namespace: argocd
   labels:
-    acmeco/team: consumer-services-caas
+    platform/team: consumer-services-caas
 spec:
   project: consumer-services
   source:

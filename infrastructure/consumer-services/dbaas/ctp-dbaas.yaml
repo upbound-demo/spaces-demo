@@ -4,7 +4,7 @@ metadata:
   name: ctp-consumer-services-dbaas
   namespace: consumer-services
   labels:
-    acmeco/team: consumer-services-dbaas
+    platform/team: consumer-services-dbaas
 spec:
   crossplane:
     autoUpgrade:

@@ -4,7 +4,7 @@ metadata:
   name: ctp-caas-config
   namespace: argocd
   labels:
-    acmeco/team: default-caas
+    platform/team: default-caas
 spec:
   project: default
   source:

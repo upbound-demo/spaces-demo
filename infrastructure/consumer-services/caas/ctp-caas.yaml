@@ -4,7 +4,7 @@ metadata:
   name: ctp-consumer-services-caas
   namespace: consumer-services
   labels:
-    acmeco/team: consumer-services-caas
+    platform/team: consumer-services-caas
 spec:
   crossplane:
     autoUpgrade:

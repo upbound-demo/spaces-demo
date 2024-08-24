@@ -4,7 +4,7 @@ metadata:
   name: ctp-dbaas
   namespace: default
   labels:
-    acmeco/team: default-dbaas
+    platform/team: default-dbaas
 spec:
   crossplane:
     autoUpgrade:

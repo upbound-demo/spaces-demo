@@ -4,7 +4,7 @@ metadata:
   name: dbaas-consumer-services-control-planes
   namespace: argocd
   labels:
-    acmeco/team: consumer-services-dbaas
+    platform/team: consumer-services-dbaas
 spec:
   project: consumer-services
   source:

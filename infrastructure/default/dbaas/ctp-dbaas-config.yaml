@@ -4,7 +4,7 @@ metadata:
   name: ctp-dbaas-config
   namespace: argocd
   labels:
-    acmeco/team: default-dbaas
+    platform/team: default-dbaas
 spec:
   project: default
   source:

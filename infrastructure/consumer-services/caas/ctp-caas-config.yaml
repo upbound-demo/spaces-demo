@@ -4,7 +4,7 @@ metadata:
   name: ctp-consumer-services-caas-config
   namespace: argocd
   labels:
-    acmeco/team: consumer-services-caas
+    platform/team: consumer-services-caas
 spec:
   project: consumer-services
   source:

@@ -1,7 +1,7 @@
 apiVersion: dbaas.upbound.io/v1alpha1
 kind: SQLInstance
 metadata:
-  name: configuration-dbaas-aws-mariadb
+  name: marketing-services-aws-mariadb
   namespace: default
 spec:
   compositionSelector:
@@ -17,7 +17,7 @@ spec:
       name: mariadbsecretaws
       key: password
   writeConnectionSecretToRef:
-    name: configuration-dbaas-aws-mariadb
+    name: marketing-services-aws-mariadb
 ---
 apiVersion: v1
 data:

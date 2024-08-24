@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: caas-marketing-services-control-planes
+  namespace: argocd
+  labels:
+    platform/team: marketing-services-caas
+spec:
+  project: marketing-services
+  source:
+    repoURL: https://github.com/upbound-demo/spaces-demo.git
+    targetRevision: large-demo
+    path: infrastructure/marketing-services/caas
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
