@@ -1,13 +1,13 @@
 apiVersion: gcp.caas.upbound.io/v1alpha1
 kind: Cluster
 metadata:
-  name: gcp-app-cluster-02
+  name: marketing-services-gke-01
   namespace: marketing-services
   annotations:
     uptest.upbound.io/pre-delete-hook: ../testhooks/gcp-release-delete.sh
 spec:
   parameters:
-    id: gcp-app-cluster-02
+    id: marketing-services-gke-01
     region: us-west2
     version: "latest"
     nodes:
@@ -18,4 +18,4 @@ spec:
     deletionPolicy: Delete
     providerConfigName: marketing-services
   writeConnectionSecretToRef:
-    name: gcp-app-cluster-02-kubeconfig
+    name: marketing-services-gke-01-kubeconfig

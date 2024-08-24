@@ -1,13 +1,13 @@
 apiVersion: aws.caas.upbound.io/v1alpha1
 kind: Cluster
 metadata:
-  name: consumer-services-aws-app-cluster-01
+  name: consumer-services-eks-01
   namespace: default
   annotations:
     uptest.upbound.io/pre-delete-hook: ../testhooks/aws-release-delete.sh
 spec:
   parameters:
-    id: consumer-services-aws-app-cluster-01
+    id: consumer-services-eks-01
     region: us-east-2
     version: '1.27'
     iam:
@@ -21,4 +21,4 @@ spec:
     deletionPolicy: Delete
     providerConfigName: default
   writeConnectionSecretToRef:
-    name: consumer-services-aws-app-cluster-01-kubeconfig
+    name: consumer-services-eks-01-kubeconfig

@@ -1,7 +1,7 @@
 apiVersion: dbaas.upbound.io/v1alpha1
 kind: SQLInstance
 metadata:
-  name: configuration-dbaas-aws-postgresql
+  name: consumer-services-aws-postgresql
   namespace: default
 spec:
   compositionSelector:
@@ -17,7 +17,7 @@ spec:
       name: psqlsecretaws
       key: password
   writeConnectionSecretToRef:
-    name: configuration-dbaas-aws-postgresql
+    name: consumer-services-aws-postgresql
 ---
 apiVersion: v1
 data:
