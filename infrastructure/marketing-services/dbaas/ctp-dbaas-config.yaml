@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ctp-marketing-services-dbaas-config
+  namespace: argocd
+  labels:
+    platform/team: marketing-services-dbaas
+spec:
+  project: marketing-services
+  source:
+    repoURL: https://github.com/upbound-demo/spaces-demo.git
+    targetRevision: large-demo
+    path: configuration/marketing-services/dbaas
+    directory:
+      recurse: true
+  destination:
+    name: ctp-marketing-services-dbaas
+    namespace: marketing-services

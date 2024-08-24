@@ -1,0 +1,14 @@
+apiVersion: spaces.upbound.io/v1beta1
+kind: ControlPlane
+metadata:
+  name: ctp-marketing-services-dbaas
+  namespace: marketing-services
+  labels:
+    platform/team: marketing-services-dbaas
+spec:
+  crossplane:
+    autoUpgrade:
+      channel: Stable 
+  writeConnectionSecretToRef:
+    name: kubeconfig-marketing-services-ctp-dbaas
+    namespace: marketing-services

@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ctp-marketing-services-caas-claims
+  namespace: argocd
+  labels:
+    platform/team: marketing-services-caas
+spec:
+  project: marketing-services
+  source:
+    repoURL: https://github.com/upbound-demo/spaces-demo.git
+    targetRevision: large-demo
+    path: claims/marketing-services/caas
+    directory:
+      recurse: true
+  destination:
+    name: ctp-marketing-services-caas
+    namespace: marketing-services
