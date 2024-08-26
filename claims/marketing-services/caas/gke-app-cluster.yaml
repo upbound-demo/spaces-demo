@@ -2,7 +2,7 @@ apiVersion: gcp.caas.upbound.io/v1alpha1
 kind: Cluster
 metadata:
   name: marketing-services-gke-01
-  namespace: marketing-services
+  namespace: default
   annotations:
     uptest.upbound.io/pre-delete-hook: ../testhooks/gcp-release-delete.sh
 spec:

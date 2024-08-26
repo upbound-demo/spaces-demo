@@ -2,7 +2,7 @@ apiVersion: azure.caas.upbound.io/v1alpha1
 kind: Cluster
 metadata:
   name: marketing-services-aks-01
-  namespace: marketing-services
+  namespace: default
   annotations:
     uptest.upbound.io/pre-delete-hook: ../testhooks/azure-release-delete.sh
 spec:
