@@ -19,6 +19,6 @@ spec:
     gitops:
       url: https://github.com/upbound/caas-cluster-configuration
     deletionPolicy: Delete
-    providerConfigName: marketing-services
+    providerConfigName: default
   writeConnectionSecretToRef:
     name: marketing-services-eks-01-kubeconfig
